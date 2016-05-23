@@ -13,7 +13,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	            SortInsertionTest.class,
 	            SortSelectionTest.class,
 	            BinomialCoefficientTest.class,
-	            BalancedParanthesisTest.class})
+	            BalancedParanthesisTest.class,
+	            SortQuickTest.class})
 public class AllTests {
 
 }

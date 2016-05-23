@@ -6,6 +6,8 @@ import java.util.Arrays;
  * Algorithm which implements the insertion sort
  * WC tc is O(n)^2 for this algorithm
  * @author rohit
+ * 
+ * TODO: Fix bug in Insertion Sort
  */
 final public class SortInsertion {
    private int[] array;

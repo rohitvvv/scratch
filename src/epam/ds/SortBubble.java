@@ -11,16 +11,20 @@ final public class SortBubble {
 	  array=Arrays.copyOf(unSortedList, unSortedList.length);
 	  sortBubble();
 	}
-	
+	/**
+	 * Bubble Sort routine
+	 */
     void sortBubble(){
     	int i,j,temp;
     	for(i=0;i<array.length;i++){
     		for(j=i+1;j<array.length;j++){
                 //This can be written in one line 
     			//e.g: swap(a,b) a=a^b^(b=c)
-    			temp=array[i];
-                array[i]=array[j];
-                array[j]=temp;
+    			if(array[i]>array[j]){
+	    			temp=array[i];
+	                array[i]=array[j];
+	                array[j]=temp;
+    			}
     		}
     	}
     }
