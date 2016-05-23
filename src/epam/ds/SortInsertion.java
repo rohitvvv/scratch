@@ -36,7 +36,7 @@ final public class SortInsertion {
 	   }
    }
    
-   public int[] getResult(){
+   public int[] getSortedList(){
 	   return array;
    }
    /**

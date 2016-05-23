@@ -11,7 +11,7 @@ public class SortInsertionTest {
 	public void sortInsertion() {
 	   int [] unSortedList={5,4,3,2,1};
 	   SortInsertion sort = new SortInsertion(unSortedList);
-	   sortedLists = sort.getResult();
+	   sortedLists = sort.getSortedList();
 	   //assert the returned list is indeed sorted
 	   assertTrue(isSorted());
 	}
