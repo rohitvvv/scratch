@@ -14,7 +14,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	            SortSelectionTest.class,
 	            BinomialCoefficientTest.class,
 	            BalancedParanthesisTest.class,
-	            SortQuickTest.class})
+	            SortQuickTest.class,
+	            TreeTest.class})
 public class AllTests {
 
 }
