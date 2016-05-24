@@ -1,4 +1,4 @@
-package epam.ds.test;
+package epam.ds.test.java;
 
 import static org.junit.Assert.*;
 

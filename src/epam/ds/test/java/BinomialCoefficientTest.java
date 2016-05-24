@@ -1,4 +1,4 @@
-package epam.ds.test;
+package epam.ds.test.java;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import epam.ds.BinomialCoefficient;
