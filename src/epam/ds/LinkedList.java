@@ -41,6 +41,8 @@ public class LinkedList<E>  {
 
     /**
      * Remove's the element in the specified index
+     * @return true if it found the specified element and removed
+     * it from the list or else false
      */
     public boolean remove(int index)
     {
@@ -82,6 +84,7 @@ public class LinkedList<E>  {
 
     /**
      * To get a specific node index from the list
+     * @return the index of the target variable if it is there
      */
     public int find (E target)
     {
@@ -93,7 +96,7 @@ public class LinkedList<E>  {
 
         while (tmpNode.next != null)
         {
-            if (tmpNode.next.data.equals(target))
+            if (tmpNode.data.equals(target))
                 return counter;
 
             tmpNode = tmpNode.next;
@@ -106,7 +109,7 @@ public class LinkedList<E>  {
 
     /**
      * Get linked list size
-     * @return
+     * @return the size of the list.
      */
     public int size(){
         return size;
