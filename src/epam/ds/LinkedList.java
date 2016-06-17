@@ -20,8 +20,9 @@ public class LinkedList<E>  {
    LinkedList(E data){
 	     
    }
-   
-   /**
+    
+
+    /**
     * Add element to the end of list
     * @param data
     * 
@@ -72,6 +73,7 @@ public class LinkedList<E>  {
         headNode.next = null;
         currentNode = headNode;
     }
+
 
     /**
     * Get linked list size
