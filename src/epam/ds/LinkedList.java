@@ -77,7 +77,7 @@ public class LinkedList<E>  {
     /**
      * To get a specific node index from the list
      */
-    public int get (E target)
+    public int find (E target)
     {
         Node<E> tmpNode = headNode;
         int counter = 0;
