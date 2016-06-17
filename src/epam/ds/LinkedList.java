@@ -44,23 +44,29 @@ public class LinkedList<E>  {
      */
     public boolean remove(int index)
     {
+        if (headNode == null || index < 1 || index > size)
+            return false;
+
+        if (index == 1)
+        {
+            headNode = headNode.next;
+
+            return true;
+        }
+
+
         Node<E> tmpNode = headNode;
 
-        for (int counter = 0; counter < index; ++counter)
+        for (int counter = 1; counter < index; ++counter)
         {
             if (tmpNode == currentNode)
                 return false;
 
+            if (index - counter != 1)
             tmpNode = tmpNode.next;
         }
-
-        if (tmpNode.next != null && tmpNode.next.next != null)
-            tmpNode.next = tmpNode.next.next;
-        else
-        {
-            tmpNode.next = null;
-            currentNode = tmpNode;
-        }
+        tmpNode.next = tmpNode.next.next;
+        size--;
 
         return true;
     }
@@ -80,14 +86,14 @@ public class LinkedList<E>  {
     public int find (E target)
     {
         Node<E> tmpNode = headNode;
-        int counter = 0;
+        int counter = 1;
 
         if (tmpNode == null)
             return -1;
 
         while (tmpNode.next != null)
         {
-            if (tmpNode.data.equals(target))
+            if (tmpNode.next.data.equals(target))
                 return counter;
 
             tmpNode = tmpNode.next;
