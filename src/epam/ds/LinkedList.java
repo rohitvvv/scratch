@@ -87,7 +87,7 @@ public class LinkedList<E>  {
 
         while (tmpNode.next != null)
         {
-            if (tmpNode.next.data.equals(target))
+            if (tmpNode.data.equals(target))
                 return counter;
 
             tmpNode = tmpNode.next;
