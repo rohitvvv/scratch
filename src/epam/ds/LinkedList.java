@@ -37,7 +37,43 @@ public class LinkedList<E>  {
 	   } 	
 	   size++;
    }
-   /**
+
+    /**
+     * Remove's the element in the specified index
+     */
+    public boolean remove(int index)
+    {
+        Node<E> tmpNode = headNode;
+
+        for (int counter = 0; counter < index; ++counter)
+        {
+            if (tmpNode == currentNode)
+                return false;
+
+            tmpNode = tmpNode.next;
+        }
+
+        if (tmpNode.next != null && tmpNode.next.next != null)
+            tmpNode.next = tmpNode.next.next;
+        else
+        {
+            tmpNode.next = null;
+            currentNode = tmpNode;
+        }
+
+        return true;
+    }
+
+    /**
+     * Removes all the elements from the list.
+     */
+    public void clear ()
+    {
+        headNode.next = null;
+        currentNode = headNode;
+    }
+
+    /**
     * Get linked list size
     * @return
     */
