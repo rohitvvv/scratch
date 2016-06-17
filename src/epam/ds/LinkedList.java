@@ -74,6 +74,29 @@ public class LinkedList<E>  {
         currentNode = headNode;
     }
 
+    /**
+     * To get a specific node index from the list
+     */
+    public int find (E target)
+    {
+        Node<E> tmpNode = headNode;
+        int counter = 0;
+
+        if (tmpNode == null)
+            return -1;
+
+        while (tmpNode.next != null)
+        {
+            if (tmpNode.next.data.equals(target))
+                return counter;
+
+            tmpNode = tmpNode.next;
+            counter++;
+        }
+
+        return -1;
+    }
+
 
     /**
      * Get linked list size
