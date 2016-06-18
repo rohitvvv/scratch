@@ -1,5 +1,7 @@
 package epam.ds;
 
+import java.util.NoSuchElementException;
+
 public class LinkedList<E>  {
     Node<E> headNode=null;
     //Keeps track of the last node
@@ -81,6 +83,28 @@ public class LinkedList<E>  {
         headNode.next = null;
         currentNode = headNode;
         size = 0;
+    }
+
+    /**
+     *@return the first element in the list.
+     */
+    public E getFirst ()
+    {
+        if (headNode == null)
+            throw new NoSuchElementException();
+
+        return headNode.data;
+    }
+
+    /**
+     *@return the last element in the list
+     */
+    public E getLast()
+    {
+        if (currentNode == null)
+            throw new NoSuchElementException();
+
+        return currentNode.data;
     }
 
     /**

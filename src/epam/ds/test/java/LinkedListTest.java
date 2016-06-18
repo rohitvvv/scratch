@@ -21,6 +21,14 @@ public class LinkedListTest {
         assertEquals(3 , list.size());
         assertEquals("[1,2,3]" , list.toString());
 
+        int first = list.getFirst();
+        int last = list.getLast();
+
+        assertEquals(last, 3);
+        assertEquals(first, 1);
+        list.clear();
+        assertEquals(list.find(1), -1);
+
         list = populateIntList(size);
         assertEquals(size, list.size());
         removeData(list, 50);
@@ -28,7 +36,7 @@ public class LinkedListTest {
         list.clear();
         assertEquals(list.size(), 0);
 	}
-	
+
 	@Test
 	public void testCharacterList()
     {
@@ -41,6 +49,13 @@ public class LinkedListTest {
         charList.addToList('t');
 	    assertEquals(5,charList.size());
 	    assertEquals("[r,o,h,i,t]",charList.toString());
+
+        char first = charList.getFirst();
+
+        assertEquals(first, 'r');
+        charList.clear();
+        assertEquals(charList.find('r'), -1);
+
 
         charList = populateCharList(size);
         assertEquals(size, charList.size());
