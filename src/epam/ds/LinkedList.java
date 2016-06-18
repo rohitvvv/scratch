@@ -80,6 +80,7 @@ public class LinkedList<E>  {
     {
         headNode.next = null;
         currentNode = headNode;
+        size = 0;
     }
 
     /**

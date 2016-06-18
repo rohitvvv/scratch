@@ -24,7 +24,9 @@ public class LinkedListTest {
         list = populateIntList(size);
         assertEquals(size, list.size());
         removeData(list, 50);
-        removeData(list, 20);
+        checkFind(list, 20);
+        list.clear();
+        assertEquals(list.size(), 0);
 	}
 	
 	@Test
@@ -44,6 +46,8 @@ public class LinkedListTest {
         assertEquals(size, charList.size());
         removeData(charList, 50);
         checkFind(charList, 20);
+        charList.clear();
+        assertEquals(charList.size(), 0);
 	}
 
     public LinkedList populateIntList (int toGenerate)
