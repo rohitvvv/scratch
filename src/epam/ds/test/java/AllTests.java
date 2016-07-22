@@ -14,6 +14,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	            SortSelectionTest.class,
 	            BinomialCoefficientTest.class,
 	            BalancedParanthesisTest.class,
+		        HashMap.class,
 	            SortQuickTest.class})
 public class AllTests {
 
