@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class Fibonacii
 {
-    static Map<Integer, BigInteger> map = new HashMap<Integer, BigInteger>();
+    static Map<Integer, BigInteger> map = (Map<Integer, BigInteger>) new HashMap<Integer, BigInteger>();
 
 
 	public Fibonacii() {
