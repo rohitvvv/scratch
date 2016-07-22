@@ -1,5 +1,7 @@
 package epam.ds;
 
+import java.util.Arrays;
+
 /**
  * Created by kamalnrf on 22/7/16.
  */
@@ -127,6 +129,12 @@ public class HashMap <K, V> implements IMap<K, V>
             return true;
     }
 
+    @Override
+    public String toString() {
+        return "HashMap{" +
+                "table=" + Arrays.toString(table) +
+                '}';
+    }
 
     public static class Node <K, V>
     {
